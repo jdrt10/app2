@@ -1,0 +1,12 @@
+<h1>Pages#home</h1>
+
+
+<% if current_user %>
+<%= link_to 'Sing_out', destroy_user_session_path, method: :delete %>
+
+
+<% else %>
+<%= link_to 'Sing_up',  new_user_registration_path %>
+<%= link_to 'Sing_in',  new_user_session_path %>
+
+<% end %>
