@@ -3,16 +3,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="https://33c2e858becf45438684e0e1482185a8.vfs.cloud9.us-east-2.amazonaws.com">Home <span class="sr-only"></span></a>
+        <%= link_to 'Home', root_path %>
       </li>
       <li class="nav-item">
         <%= link_to 'Announcements',  announcements_path %>
       </li>
       
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
