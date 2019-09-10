@@ -29,6 +29,7 @@ class AnnouncementsController < ApplicationController
     @announcement.user = current_user
     respond_to do |format|
       if @announcement.save
+        flash[:success] = "New announcement posted!"
         format.html { redirect_to @announcement, notice: 'Announcement was successfully created.' }
         format.json { render :show, status: :created, location: @announcement }
       else

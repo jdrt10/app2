@@ -20,8 +20,9 @@
         <td><%= announcement.content %></td>
         <td><%= announcement.user.email %></td>
         <td><%= link_to 'Show', announcement %></td>
-        <% if current_user %>
-          <td><%= link_to 'Seen', edit_announcement_path(announcement) %></td>
+        <% if current_user%>
+          <% current_user.announcements.push(announcement.id) %>
+          <td><%= link_to 'Seen', announcements_path %></td>
         <% end %>
       </tr>
     <% end %>
